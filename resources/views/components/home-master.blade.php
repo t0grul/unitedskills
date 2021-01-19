@@ -40,7 +40,7 @@
                     <a class="nav-link" href="#">{{Auth::user()->name}}</a>
                 </li>
                 <li class="nav-item">
-                     <a class="nav-link" href="#">Create a post</a>
+                     <a class="nav-link" href="{{route('home')}}">Create a post</a>
                 </li>
                     <li class="nav-item">
                     <a class="nav-link" type="button" data-toggle="modal" data-target="#exampleModal">Log out</a>
