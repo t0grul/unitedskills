@@ -37,12 +37,37 @@
                 </li>
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Username</a>
+                    <a class="nav-link" href="#">{{Auth::user()->name}}</a>
                 </li>
                 <li class="nav-item">
                      <a class="nav-link" href="#">Create a post</a>
                 </li>
+                    <li class="nav-item">
+                    <a class="nav-link" type="button" data-toggle="modal" data-target="#exampleModal">Log out</a>
+                    </li>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Logging out</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure to log out?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a class="btn btn-primary" href="/logout" role="button">Log out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endauth
+
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Log in</a>
